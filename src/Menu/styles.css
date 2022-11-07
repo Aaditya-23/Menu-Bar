@@ -1,0 +1,47 @@
+.menu {
+  font-family: monospace;
+  padding: var(--menu-padding);
+  height: fit-content;
+  width: fit-content;
+  background-color: #1c2833;
+  border-radius: 5px;
+}
+
+.menu-label {
+  font-size: 1.5rem;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.current-option {
+  position: absolute;
+  right: calc(-0% - var(--menu-padding));
+  transform: translateY(-25%);
+  height: 3.5rem;
+  animation: animateWidth 0.9s cubic-bezier(0.98, 0.04, 0.9, 0.96) infinite alternate;
+  background-color: #1a5276;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  transition: all 0.2s ease-out;
+}
+
+@keyframes animateWidth {
+  from {
+    width: 250%;
+  }
+  to {
+    width: 190%;
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.option {
+  width: 20px;
+}
